@@ -27,6 +27,7 @@ const Service = () => {
   return (
     <>
     <div className="service-title ">
+    <h1 className="sr-only">Welcome to aayushhealth | Aayushwellness| Online consultaion|Treatment|Franchisee| Online Doctor Consultation |Aayushwellness,Aayushhealth,view medical records online,patient health portal,hospital appointment booking,virtual health consultation,health checkup packages,Heatlhcare Sevices, Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment  </h1>
     
     <h2>OUR SERVICES</h2>
    
