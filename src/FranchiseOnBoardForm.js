@@ -1157,6 +1157,7 @@ export default function FranchiseOnBoardForm() {
   return (
     <><Header />
     <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen pt-16 pb-10">
+    <h1 className="sr-only">Welcome to aayushhealth | Aayushwellness| Online consultaion|Treatment|Franchisee| Online Doctor Consultation |Aayushwellness,Aayushhealth,view medical records online,patient health portal,hospital appointment booking,virtual health consultation,health checkup packages,Heatlhcare Sevices, Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment  </h1>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="overflow-hidden opacity-0 translate-y-4"
