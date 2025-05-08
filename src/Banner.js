@@ -48,16 +48,16 @@ const Banner = () => {
 
   const mobileContent = [
     
-    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705053/aqd4zfee7q5bf4f0rmky.m3u8" },
+    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705053/aqd4zfee7q5bf4f0rmky.mp4" },
     { type: "image", src: "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/Slider_banner_2_mobile_9bbc2622-bb9e-48d8-a303-b1dfd6dcd11d.jpg?v=1740134272" },
-    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705059/aynunh4459diqflmhto8.m3u8" },
+    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705059/aynunh4459diqflmhto8.mp4" },
   ];
 
   const desktopContent = [  
     
-    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705055/wdtsdjig70jthqeaawnq.m3u8" },
+    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705055/wdtsdjig70jthqeaawnq.mp4" },
     { type: "image", src: "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/Slider_banner_2_158998cf-e091-408f-913c-aa86b186ea43.jpg?v=1740134272" },
-    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705060/umtsxyjpzvyigrnutie9.m3u8" },
+    { type: "video", src: "https://res.cloudinary.com/dyelrauyn/video/upload/v1746705060/umtsxyjpzvyigrnutie9.mp4" },
   ];
 
   
