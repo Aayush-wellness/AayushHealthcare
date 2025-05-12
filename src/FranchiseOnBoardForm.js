@@ -336,7 +336,7 @@ export default function FranchiseOnBoardForm() {
           <div className="fixed right-6 bottom-6 z-50 flex flex-col gap-4">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/+918655611700"
+              href="https://wa.me/+918433732988"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 active:scale-95 group"
@@ -352,7 +352,7 @@ export default function FranchiseOnBoardForm() {
 
             {/* Call Button */}
             <a
-              href="tel:+918655611700"
+              href="tel:+918433732988"
               className="flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110 active:scale-95 group"
               aria-label="Call us"
             >
