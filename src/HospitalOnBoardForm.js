@@ -857,22 +857,26 @@ import { useState } from "react"
 import { useLocation } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import Header from "./Header"
-import HNewFooter from "./HNewfooter"
 import { Helmet } from "react-helmet"
-
-
-
-<Helmet>
+;<Helmet>
   <title>Hospital Onboarding | Healthcare</title>
-  <meta name="description" content="Join Aayush Healthcare as a healthcare franchise partner. Fill out the onboarding form to become a part of our medical network." />
-  <meta name="keywords" content="Aayushwellness,Aayushhealth,view medical records online,patient health portal,hospital appointment booking,virtual health consultation,health checkup packages,Heatlhcare Sevices, Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment" />
+  <meta
+    name="description"
+    content="Join Aayush Healthcare as a healthcare franchise partner. Fill out the onboarding form to become a part of our medical network."
+  />
+  <meta
+    name="keywords"
+    content="Aayushwellness,Aayushhealth,view medical records online,patient health portal,hospital appointment booking,virtual health consultation,health checkup packages,Heatlhcare Sevices, Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment"
+  />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.aayushhealth.com/" />
 
   {/* Open Graph for Facebook */}
   <meta property="og:title" content="Franchise Onboarding | Healthcare" />
-  <meta property="og:description" content="Become a Healthcare franchise partner. Submit your hospital and doctor details easily." />
+  <meta
+    property="og:description"
+    content="Become a Healthcare franchise partner. Submit your hospital and doctor details easily."
+  />
   <meta property="og:url" content="https://www.aayushhealth.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.aayushhealth.com/" />
@@ -880,11 +884,14 @@ import { Helmet } from "react-helmet"
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Franchise Onboarding | Healthcare" />
-  <meta name="twitter:description" content="franchise, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment" />
+  <meta
+    name="twitter:description"
+    content="franchise, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment"
+  />
   <meta name="twitter:image" content="https://www.aayushhealth.com/" />
 </Helmet>
 
-const FranchiseOnBoardForm = () => {
+const HospitalOnBoardForm = () => {
   const [loading, setLoading] = useState(false)
   const [downloadLoading, setDownloadLoading] = useState(false)
   const [fileErrors, setFileErrors] = useState({
@@ -1081,7 +1088,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/download", {
+      const response = await fetch("https://formbackend-n4tm.onrender.com/api/hospital/download", {
         signal: controller.signal,
       })
 
@@ -1095,7 +1102,7 @@ const FranchiseOnBoardForm = () => {
       const blob = await response.blob()
       const link = document.createElement("a")
       link.href = URL.createObjectURL(blob)
-      link.download = "doctors.xlsx"
+      link.download = "hospitals.xlsx"
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -1308,8 +1315,15 @@ const FranchiseOnBoardForm = () => {
 
   return (
     <>
-      <Header />
-      <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen pt-16 pb-10">
+      <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen pb-10">
+        <h1 className="sr-only">
+          Welcome to aayushhealth | Aayushwellness| Online consultaion|Treatment|Franchisee| Online Doctor Consultation
+          |Aayushwellness,Aayushhealth,view medical records online,patient health portal,hospital appointment
+          booking,virtual health consultation,health checkup packages,Heatlhcare Sevices,
+          Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network,
+          healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable
+          treatment{" "}
+        </h1>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className=" overflow-hidden opacity-0 translate-y-4"
@@ -1318,7 +1332,7 @@ const FranchiseOnBoardForm = () => {
             }}
           >
             {formSubmitted ? (
-              <div className="p-8 text-center">
+              <div className=" text-center">
                 <div
                   className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 scale-0"
                   style={{
@@ -1837,10 +1851,12 @@ const FranchiseOnBoardForm = () => {
         }
       `}</style>
       <ToastContainer position="top-right" autoClose={5000} />
-      <HNewFooter />
     </>
   )
 }
+
+export default HospitalOnBoardForm
+
 
 export default FranchiseOnBoardForm
 
