@@ -1858,5 +1858,5 @@ const HospitalOnBoardForm = () => {
 export default HospitalOnBoardForm
 
 
-export default FranchiseOnBoardForm
+
 
