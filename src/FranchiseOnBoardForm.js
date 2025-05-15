@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -86,7 +88,7 @@ export default function FranchiseOnBoardForm() {
   })
 
   // For admin access via URL parameter
-  const isAdmin = false // In a real app, you'd get this from URL params or auth state
+  const isAdmin = new URLSearchParams(window.location.search).get("admin") === "true"
 
   const formSections = [
     { title: "Personal Information", icon: "user" },
@@ -186,7 +188,17 @@ export default function FranchiseOnBoardForm() {
 
     Object.keys(doctorData).forEach((key) => {
       if (key === "certificates") {
-        doctorData.certificates.forEach((file) => formData.append("certificates", file))
+        if (doctorData.certificates && doctorData.certificates.length > 0) {
+          doctorData.certificates.forEach((file) => {
+            if (file instanceof File) {
+              formData.append("certificates", file)
+            }
+          })
+        }
+      } else if (key === "panCard") {
+        if (doctorData.panCard instanceof File) {
+          formData.append("panCard", doctorData.panCard)
+        }
       } else if (doctorData[key] !== undefined && doctorData[key] !== null) {
         formData.append(key, doctorData[key])
       }
